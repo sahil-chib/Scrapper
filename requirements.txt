@@ -1,0 +1,7 @@
+fastapi==0.95.1
+uvicorn==0.21.1
+sqlalchemy==2.0.17
+mysql-connector-python==8.0.33
+beautifulsoup4==4.12.2
+requests==2.31.0
+dateparser==1.1.8
