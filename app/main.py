@@ -16,6 +16,7 @@ def get_db():
     finally:
         db.close()
 
+
 @app.post("/scrape")
 def scrape_data(db: Session = Depends(get_db)):
     try:
@@ -24,10 +25,12 @@ def scrape_data(db: Session = Depends(get_db)):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+
 @app.get("/data")
 def read_data(skip: int = 0, limit: int = 30, db: Session = Depends(get_db)):
     posts = crud.get_posts(db, skip=skip, limit=limit)
     return posts
+
 
 @app.get("/status")
 def read_status():

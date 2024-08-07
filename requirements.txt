@@ -5,3 +5,4 @@ mysql-connector-python==8.0.33
 beautifulsoup4==4.12.2
 requests==2.31.0
 dateparser==1.1.8
+
